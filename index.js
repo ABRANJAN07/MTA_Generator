@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 
 rl.question('Enter your project name: ', (name) => {
   rl.question('Enter your XSUAA module name: ', (uaa) => {
-    rl.question('Enter your xsuaa service instance name'), (xsuaa) => {
+    rl.question('Enter your xsuaa service instance name', (xsuaa) => {
         const yaml = `
 - name: ${name}-destination-content
   type: com.sap.application.content
@@ -72,6 +72,6 @@ resources:
         }
         rl.close();
         });
-    }
+    });
   });
 });
