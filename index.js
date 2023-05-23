@@ -8,8 +8,8 @@ const rl = readline.createInterface({
 
 rl.question('Enter your project name: ', (name) => {
   rl.question('Enter your XSUAA module name: ', (uaa) => {
-    rl.question('Enter your xsuaa service instance name', (xsuaa) => {
-        const yaml = `
+    rl.question('Enter your xsuaa service instance name: ', (xsuaa) => {
+      const yaml = `
 - name: ${name}-destination-content
   type: com.sap.application.content
   requires:
@@ -64,14 +64,14 @@ resources:
     service-plan: lite
 `;
 
-        fs.writeFile('generatedCode.yaml', yaml, (err) => {
+      fs.writeFile('generatedCode.yaml', yaml, (err) => {
         if (err) {
-            console.error(err);
+          console.error(err);
         } else {
-            console.log('YAML code generated successfully!');
+          console.log('MTA YAML code generated successfully!');
         }
         rl.close();
-        });
+      });
     });
   });
 });
