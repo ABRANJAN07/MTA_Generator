@@ -1,6 +1,6 @@
 {
   "name": "mta_generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate the ui5 MTA automatically for your project",
   "main": "index.js",
   "scripts": {
